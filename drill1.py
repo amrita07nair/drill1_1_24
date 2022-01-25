@@ -16,11 +16,12 @@ print(a)
 #QUESTION 2
 
 arr1D = np.array([0,1,2]) 
-arr2D = np.zeros((3,3), dtype='int32')
+arr2D = np.zeros((arr1D.shape[0],arr1D.shape[0]), dtype='int32')
 print(arr1D)
 print(arr2D)
-for i in range(0,3):
-    for j in range(0,3):
+print(arr1D.shape)
+for i in range(0,arr1D.shape[0]):
+    for j in range(0,arr1D.shape[0]):
         arr2D[i,j]=arr1D[j]-i
 
 print(arr2D)
@@ -28,5 +29,7 @@ print(arr2D)
 #QUESTION 3
 
 """
-
+I was feeling a bit confused about the terms. I was in class but needed a more basic and easy way to understand the 2 methods.
+This article helped me understand the question and concepts: https://towardsdatascience.com/stochastic-gradient-descent-clearly-explained-53d239905d31
+To answer the question, we save time by using randomness to find the minimum. In the standard method, a random point is selected at first and the step size is founs. Then 
 """
